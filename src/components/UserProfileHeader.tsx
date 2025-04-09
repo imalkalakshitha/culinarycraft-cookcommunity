@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { User, Recipe } from '@/types';
 import { currentUser } from '@/utils/mockData';
 import { Edit, Settings } from "lucide-react";
@@ -58,12 +58,14 @@ const UserProfileHeader = ({ user, recipes }: UserProfileHeaderProps) => {
         </div>
       </div>
       
-      <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="recipes">Recipes</TabsTrigger>
-        <TabsTrigger value="saved">Saved</TabsTrigger>
-        <TabsTrigger value="progress">Progress</TabsTrigger>
-        <TabsTrigger value="plans">Plans</TabsTrigger>
-      </TabsList>
+      <Tabs defaultValue="recipes">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="recipes">Recipes</TabsTrigger>
+          <TabsTrigger value="saved">Saved</TabsTrigger>
+          <TabsTrigger value="progress">Progress</TabsTrigger>
+          <TabsTrigger value="plans">Plans</TabsTrigger>
+        </TabsList>
+      </Tabs>
     </div>
   );
 };
