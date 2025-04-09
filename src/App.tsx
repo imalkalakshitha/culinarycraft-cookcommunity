@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import CreateRecipe from "./pages/CreateRecipe";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Challenges from "./pages/Challenges";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/create" element={<CreateRecipe />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/challenges" element={<Challenges />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
